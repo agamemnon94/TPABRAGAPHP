@@ -23,6 +23,20 @@ if (isset($_GET)) {
 // J'ai problème avec la valeur "0" qui n'est pas prise en compte
 
 
+// Essayer de créer une fonction pour réaliser l'opération de conversion
+// $arg1 = $_GET['temp'];
+// function convert($arg1)
+// {
+//   $resultat = $arg1 * (9 / 5) + 32;
+//   return $resultat;
+// }
+// echo "<br>";
+// echo "<br>";
+// echo "<br>";
+// echo "<br>";
+// echo "<br>";
+// echo "<br>";
+// echo $resultat;
 
 
 
