@@ -1,9 +1,13 @@
 <?php
 session_start();
-if (!$_SESSION['password']) {
-  header('location: http://localhost/TPABRAGAPHP/conn_success.php');
+// if (!$_SESSION['password']) {
+//   header('location: http://localhost/TPABRAGAPHP/conn_success.php');
+// }
+if (!empty($_SESSION['nom'])) {
+  $user = $_SESSION['nom'];
+} else {
+  $user = "Visiteur";
 }
-$user = $_SESSION['nom'];
 
 // echo "<pre>";
 // echo "<br>";

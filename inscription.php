@@ -24,7 +24,7 @@ $maDate = date("D d M Y H:i:s");
 // Créer le fichier avec le prénom et le timestamp
 
 
-
+// if ($_POST['valider']) {
 if (isset($_POST) && !empty($_POST)) {
 
   // $firstname = $_POST['firstname'] . "<br>";
@@ -54,7 +54,7 @@ if (isset($_POST) && !empty($_POST)) {
 } else {
   $demande = "Il manque des informations ;)";
 }
-
+// }
 
 
 
