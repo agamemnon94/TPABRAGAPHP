@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="www/main.css">
+  <title>Inscription</title>
+</head>
+
+<body>
+  <?php require "templates/header.phtml" ?>
+  <form action="convertisseur.php" method="get">
+    <div class="result" placeholder="Résultat">
+      <?= $convResult ?>°
+    </div>
+    <label for="temp">Saisir une température</label>
+    <input type="number" name="temp" value="">
+
+    <select name="unit" id="">
+      <option value="Fah">Fahrenheit</option>
+      <option value="Kel">Kelvin</option>
+    </select>
+
+    <button class=" btn shine" type="submit">Convertir</button>
+  </form>
+
+  <?php require "templates/footer.phtml" ?>
+  <script src="script/main.js"></script>
+</body>
+
+</html>

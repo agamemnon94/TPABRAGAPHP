@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="www/main.css">
+  <title>Connexion</title>
+</head>
+
+<body>
+  <?php require "templates/header.phtml" ?>
+
+
+  <form action="conn_success.php" method="get">
+
+    <label for="nom">Nom</label>
+    <input type="text" class="" id="nom" name="nom">
+
+    <label for="password">Mot de passe</label>
+    <input type="password" class="" id="password" name="password">
+
+    <button class="btn" type="submit" name="valider" id="valider">Valider</button>
+  </form>
+  <div class="deco_div">
+    <a class="deco" href="logout.php">Déconnexion</a>
+  </div>
+  <?php require "templates/footer.phtml" ?>
+</body>
+
+</html>
