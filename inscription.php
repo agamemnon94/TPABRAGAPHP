@@ -24,7 +24,6 @@ $maDate = date("D d M Y H:i:s");
 // Créer le fichier avec le prénom et le timestamp
 
 
-// if ($_POST['valider']) {
 if (isset($_POST) && !empty($_POST)) {
 
   // $firstname = $_POST['firstname'] . "<br>";
@@ -52,9 +51,8 @@ if (isset($_POST) && !empty($_POST)) {
   // Création d'une variable contenant un message qui indique au user si sa demande a été prise en compte ou non
   $demande = "Votre demande a bien été prise en compte ;)";
 } else {
-  $demande = "Il manque des informations ;)";
+  $demande = "Merci de compléter le formulaire ;)";
 }
-// }
 
 
 

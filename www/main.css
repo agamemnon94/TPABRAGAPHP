@@ -120,6 +120,10 @@ body::-webkit-scrollbar-corner {
   padding: 0px 50px;
   text-shadow: 8px 8px 15px #000;
 }
+.p_demande {
+  font-size: 25px;
+  margin: 20px 0;
+}
 /****************************/
 /******     Forms     *******/
 /****************************/
@@ -264,8 +268,8 @@ select {
 }
 .check_box_container {
   text-align: center;
-  background: #333;
-  padding: 25px;
+  background: rgb(51, 51, 51, 0.7);
+  padding: 20px;
   border-radius: 10px;
   margin: 40px auto;
   box-shadow: 0 0 15px 0 #000;
