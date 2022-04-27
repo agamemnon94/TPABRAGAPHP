@@ -51,7 +51,7 @@ if (isset($_POST) && !empty($_POST)) {
   // Création d'une variable contenant un message qui indique au user si sa demande a été prise en compte ou non
   $demande = "Tu vas bientôt faire partie de la famille ;)";
 } else {
-  $demande = "Inscrit toi ! ;)";
+  $demande = "Inscris toi ! ;)";
 }
 
 
