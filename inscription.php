@@ -14,6 +14,9 @@
 
 //Ajouter le timestamp au nom de fichier
 $tsp = strtotime('now');
+
+// ↓ plutôt ça
+// $tsp = time();
 // echo $tsp;
 
 //récupérer la date et heure du jour
@@ -22,25 +25,27 @@ $maDate = date("D d M Y H:i:s");
 // Préparer le nom du fichier
 
 // Créer le fichier avec le prénom et le timestamp
-
+// if (isset($_POST['firstname']) && isset($_POST['name']) && isset($_POST['email']) && isset($_POST['majeur'])) {
+// }
 
 if (isset($_POST) && !empty($_POST)) {
 
-  // $firstname = htmlentities($_POST['firstname']) . "<br>";
-  // $name = htmlentities($_POST['name']);
-  // $email = htmlentities($_POST['email']);
+  $firstname = htmlentities($_POST['firstname']) . "<br>";
+  $name = htmlentities($_POST['name']);
+  $email = htmlentities($_POST['email']);
   $majeur = htmlentities($_POST['majeur']);
 
   $newFileName = $_POST['firstname']  . "_" . $tsp;
+  // $newFileName = $_POST['firstname']  . "_" . $tsp.".txt";
 
   $demandeInscription = fopen("demandes_inscription/$newFileName.txt", "a+");
 
   //Écrire dans le fichier au moment de sa création.
-  fwrite($demandeInscription, "Demande d'inscription de " . $_POST['firstname'] . " au " . $maDate . "\n");
+  fwrite($demandeInscription, "Demande d'inscription de " . $firstname . " au " . $maDate . "\n");
 
-  fwrite($demandeInscription, "Nom : " . $_POST['name'] . "\n");
+  fwrite($demandeInscription, "Nom : " . $name . "\n");
 
-  fwrite($demandeInscription, "email : " . $_POST['email'] . "\n");
+  fwrite($demandeInscription, "email : " . $email . "\n");
 
   // J'utilise la variable créee pour renseigner l'état de majorité du user
   //Les variables ne sont pas utiles dans le cas présent
