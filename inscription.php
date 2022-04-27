@@ -51,7 +51,7 @@ if (isset($_POST) && !empty($_POST)) {
   // Création d'une variable contenant un message qui indique au user si sa demande a été prise en compte ou non
   $demande = "Votre demande a bien été prise en compte ;)";
 } else {
-  $demande = "Merci de compléter le formulaire ;)";
+  $demande = "Merci de renseigner le formulaire ;)";
 }
 
 
