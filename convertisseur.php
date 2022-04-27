@@ -20,16 +20,27 @@ if (isset($_GET)) {
     }
   }
 }
+
+// Sécuriser avec "isNAN
 // J'ai problème avec la valeur "0" qui n'est pas prise en compte
 
 
 // Essayer de créer une fonction pour réaliser l'opération de conversion
-// $arg1 = $_GET['temp'];
-// function convert($arg1)
-// {
-//   $resultat = $arg1 * (9 / 5) + 32;
-//   return $resultat;
-// }
+function convert()
+{
+
+  $temp = htmlentities($_GET['temp']);
+  $unit = htmlentities($_GET['unit']);
+  $fah = '';
+  $Kel = '';
+
+  $resultat = $temp * (9 / 5) + 32;
+  return $resultat;
+}
+
+// convert($temp);
+
+
 // echo "<br>";
 // echo "<br>";
 // echo "<br>";

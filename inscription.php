@@ -26,10 +26,10 @@ $maDate = date("D d M Y H:i:s");
 
 if (isset($_POST) && !empty($_POST)) {
 
-  // $firstname = $_POST['firstname'] . "<br>";
-  // $name = $_POST['name'];
-  // $email = $_POST['email'];
-  $majeur = $_POST['majeur'];
+  // $firstname = htmlentities($_POST['firstname']) . "<br>";
+  // $name = htmlentities($_POST['name']);
+  // $email = htmlentities($_POST['email']);
+  $majeur = htmlentities($_POST['majeur']);
 
   $newFileName = $_POST['firstname']  . "_" . $tsp;
 
