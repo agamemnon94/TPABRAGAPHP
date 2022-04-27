@@ -12,11 +12,11 @@ $convResult = '';
 
 
 if (isset($_GET)) {
-  if (!empty($_GET['temp']) && !empty($_GET['unit'])) {
+  if (!is_null($_GET['temp']) && !empty($_GET['unit']) && $_GET['unit'] !== 'defaut') {
     if ($_GET['unit'] == "Fah") {
-      $convResult = $_GET['temp'] * (9 / 5) + 32;
+      $convResult = htmlentities($_GET['temp']) * (9 / 5) + 32;
     } else {
-      $convResult = $_GET['temp']  + 273.15;
+      $convResult = htmlentities($_GET['temp'])  + 273.15;
     }
   }
 }
@@ -26,17 +26,20 @@ if (isset($_GET)) {
 
 
 // Essayer de créer une fonction pour réaliser l'opération de conversion
-function convert()
-{
+// function convert()
+// {
 
-  $temp = htmlentities($_GET['temp']);
-  $unit = htmlentities($_GET['unit']);
-  $fah = '';
-  $Kel = '';
+// $temp = htmlentities($_GET['temp']);
+// $unit = htmlentities($_GET['unit']);
+// $fah = '';
+// $Kel = '';
+//if($unit="fah){
+// $resultat = $temp * (9 / 5) + 32;
+// return $resultat;
 
-  $resultat = $temp * (9 / 5) + 32;
-  return $resultat;
-}
+// }
+//$resultat = $temp + 273.15;
+// }
 
 // convert($temp);
 
