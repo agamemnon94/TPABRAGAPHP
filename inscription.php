@@ -13,10 +13,10 @@
 //Création d'un nouveau fichier pour chaque requête user
 
 //Ajouter le timestamp au nom de fichier
-$tsp = strtotime('now');
+// $tsp = strtotime('now');
 
 // ↓ plutôt ça
-// $tsp = time();
+$tsp = time();
 // echo $tsp;
 
 //récupérer la date et heure du jour
@@ -30,15 +30,16 @@ $maDate = date("D d M Y H:i:s");
 
 if (isset($_POST) && !empty($_POST)) {
 
-  $firstname = htmlentities($_POST['firstname']) . "<br>";
+  $firstname = htmlentities($_POST['firstname']);
   $name = htmlentities($_POST['name']);
   $email = htmlentities($_POST['email']);
   $majeur = htmlentities($_POST['majeur']);
 
-  $newFileName = $_POST['firstname']  . "_" . $tsp;
+  $newFileName = $firstname  . "_" . $tsp . ".txt";
   // $newFileName = $_POST['firstname']  . "_" . $tsp.".txt";
 
-  $demandeInscription = fopen("demandes_inscription/$newFileName.txt", "a+");
+  // $demandeInscription = fopen("demandes_inscription/$newFileName.txt", "a+");
+  $demandeInscription = fopen("demandes_inscription/$newFileName.txt", "w+");
 
   //Écrire dans le fichier au moment de sa création.
   fwrite($demandeInscription, "Demande d'inscription de " . $firstname . " au " . $maDate . "\n");
@@ -56,7 +57,7 @@ if (isset($_POST) && !empty($_POST)) {
   // Je n'ai pas rajouté le prénom car il est déjà évoqué en première ligne du fichier
 
   // Création d'une variable contenant un message qui indique au user si sa demande a été prise en compte ou non
-  $demande = "Tu vas bientôt faire partie de la famille ;)";
+  $demande = "$firstname, Tu vas bientôt faire partie de la famille ;)";
 } else {
   $demande = "Inscris toi ! ;)";
 }
