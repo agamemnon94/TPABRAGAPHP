@@ -16,11 +16,9 @@
 // $tsp = strtotime('now');
 
 // ↓ plutôt ça
-$tsp = time();
 // echo $tsp;
 
 //récupérer la date et heure du jour
-$maDate = date("D d M Y H:i:s");
 
 // Préparer le nom du fichier
 
@@ -30,6 +28,8 @@ $maDate = date("D d M Y H:i:s");
 
 if (isset($_POST) && !empty($_POST)) {
 
+  $tsp = time();
+  $maDate = date("D d M Y H:i:s");
   $firstname = htmlentities($_POST['firstname']);
   $name = htmlentities($_POST['name']);
   $email = htmlentities($_POST['email']);
@@ -39,7 +39,7 @@ if (isset($_POST) && !empty($_POST)) {
   // $newFileName = $_POST['firstname']  . "_" . $tsp.".txt";
 
   // $demandeInscription = fopen("demandes_inscription/$newFileName.txt", "a+");
-  $demandeInscription = fopen("demandes_inscription/$newFileName.txt", "w+");
+  $demandeInscription = fopen("demandes_inscription/$newFileName", "w+");
 
   //Écrire dans le fichier au moment de sa création.
   fwrite($demandeInscription, "Demande d'inscription de " . $firstname . " au " . $maDate . "\n");
@@ -57,7 +57,7 @@ if (isset($_POST) && !empty($_POST)) {
   // Je n'ai pas rajouté le prénom car il est déjà évoqué en première ligne du fichier
 
   // Création d'une variable contenant un message qui indique au user si sa demande a été prise en compte ou non
-  $demande = "$firstname, Tu vas bientôt faire partie de la famille ;)";
+  $demande = "$firstname, Tu vas bientôt faire partie de la famille ;)" . "<br>";
 } else {
   $demande = "Inscris toi ! ;)";
 }
