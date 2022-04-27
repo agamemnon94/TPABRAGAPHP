@@ -3,6 +3,10 @@ let lastScrollTop = 0;
 let h1Disapear = document.querySelector('.h1_Welcome');
 let h2Nyc = document.querySelector('.h2_nyc');
 
+window.addEventListener('load', () => {
+  h1Disapear.classList.add('opacityOn');
+})
+
 window.addEventListener('scroll', () => {
   console.log(scrollY);
   let scrollTop = window.pageYOffset || this.document.scrollTop;
@@ -13,8 +17,10 @@ window.addEventListener('scroll', () => {
   }
   lastScrollTop = scrollTop;
   if (window.scrollY > 90) {
+    h1Disapear.classList.remove('opacityOn');
     h1Disapear.classList.add('disapear');
   } if (window.scrollY < 45) {
+    h1Disapear.classList.add('opacityOn');
     h1Disapear.classList.remove('disapear');
     h2Nyc.classList.remove('apear');
   } if (window.scrollY > 550) {

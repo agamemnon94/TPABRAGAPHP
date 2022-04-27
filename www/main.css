@@ -56,11 +56,12 @@ body::-webkit-scrollbar-corner {
   color: lightskyblue;
   font-family: "Spartan", sans-serif;
   font-weight: 500;
-  transition: 0.5s ease-in-out;
+  transition: 0.3s ease-in-out;
   text-shadow: 8px 8px 15px #000;
+  opacity: 0;
 }
 .disapear {
-  margin-left: -900px;
+  margin-left: -1900px;
   opacity: 0;
   transition: 1s ease-in-out;
 }
@@ -83,8 +84,13 @@ body::-webkit-scrollbar-corner {
   margin-top: 50px;
   transition: 1.5s ease-out;
 }
+.opacityOn {
+  opacity: 1;
+  transition: 2s ease-in-out;
+}
 .bigApple {
   color: greenyellow;
+  font-size: 65px;
 }
 .section1 {
   position: relative;
