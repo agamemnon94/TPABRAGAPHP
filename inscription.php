@@ -49,9 +49,9 @@ if (isset($_POST) && !empty($_POST)) {
   // Je n'ai pas rajouté le prénom car il est déjà évoqué en première ligne du fichier
 
   // Création d'une variable contenant un message qui indique au user si sa demande a été prise en compte ou non
-  $demande = "Votre demande a bien été prise en compte ;)";
+  $demande = "Tu vas bientôt faire partie de la famille ;)";
 } else {
-  $demande = "Merci de renseigner le formulaire ;)";
+  $demande = "Inscrit toi ! ;)";
 }
 
 
