@@ -44,7 +44,9 @@ if (isset($_POST) && !empty($_POST)) {
 
   // J'utilise la variable créee pour renseigner l'état de majorité du user
   //Les variables ne sont pas utiles dans le cas présent
+  // En fait si, les variables sont indispensables
   fwrite($demandeInscription, "Majeur : " . $majeur . "\n");
+  fclose($demandeInscription);
 
   // Je n'ai pas rajouté le prénom car il est déjà évoqué en première ligne du fichier
 
