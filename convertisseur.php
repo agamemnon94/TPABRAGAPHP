@@ -11,13 +11,11 @@ if (!$_SESSION['password']) {
 $convResult = '';
 
 
-if (isset($_GET)) {
-  if (!empty($_GET['unit']) && !is_null($_GET['temp'])) {
-    if ($_GET['unit'] == "Fah") {
-      $convResult = htmlentities($_GET['temp']) * (9 / 5) + 32;
-    } else {
-      $convResult = htmlentities($_GET['temp'])  + 273.15;
-    }
+if (!empty($_GET['unit']) && !is_null($_GET['temp'])) {
+  if ($_GET['unit'] == "Fah") {
+    $convResult = (htmlentities($_GET['temp']) * (9 / 5) + 32) . " °";
+  } else {
+    $convResult = (htmlentities($_GET['temp'])  + 273.15) . " °";
   }
 }
 
@@ -30,29 +28,25 @@ if (isset($_GET)) {
 // function convert()
 // {
 
-// $temp = htmlentities($_GET['temp']);
-// $unit = htmlentities($_GET['unit']);
-// $fah = '';
-// $Kel = '';
-//if($unit="fah){
-// $resultat = $temp * (9 / 5) + 32;
-// return $resultat;
-
+// if (isset($_GET)) {
+//   if (!empty($_GET['unit']) && !is_null($_GET['temp']) && is_numeric($_GET['temp'])) {
+//     $unit = htmlentities($_GET['unit']);
+//     $celsius = htmlentities($_GET['temp']);
+//     converCelsius($unit, $celsius);
+//   }
 // }
-//$resultat = $temp + 273.15;
+// function converCelsius($unit, $celsius)
+// {
+//   if ($unit == "fah") {
+//     $resultat = ($celsius * (9 / 5) + 32) . " °F";
+//     return $resultat;
+//   } elseif ($unit == "kel") {
+//     $resultat = ($celsius + 273.15) / " °K";
+//     return $resultat;
+//   } else {
+//     return 0;
+//   }
 // }
-
-// convert($temp);
-
-
-// echo "<br>";
-// echo "<br>";
-// echo "<br>";
-// echo "<br>";
-// echo "<br>";
-// echo "<br>";
-// echo $resultat;
-
 
 
 
