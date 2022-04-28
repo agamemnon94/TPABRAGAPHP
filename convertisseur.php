@@ -12,7 +12,7 @@ $convResult = '';
 
 
 if (isset($_GET)) {
-  if (!is_null($_GET['temp']) && !empty($_GET['unit']) && $_GET['unit'] !== 'defaut') {
+  if (!empty($_GET['unit']) && !is_null($_GET['temp'])) {
     if ($_GET['unit'] == "Fah") {
       $convResult = htmlentities($_GET['temp']) * (9 / 5) + 32;
     } else {
@@ -21,8 +21,9 @@ if (isset($_GET)) {
   }
 }
 
-// Sécuriser avec "isNAN
+// Sécuriser avec "is_numeric
 // J'ai problème avec la valeur "0" qui n'est pas prise en compte
+// Réglé avec !is_null
 
 
 // Essayer de créer une fonction pour réaliser l'opération de conversion

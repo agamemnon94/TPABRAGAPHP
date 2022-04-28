@@ -29,7 +29,7 @@
 if (isset($_POST) && !empty($_POST)) {
 
   $tsp = time();
-  $maDate = date("D d M Y H:i:s");
+  $maDate = date("D/d/M/Y H:i:s");
   $firstname = htmlentities($_POST['firstname']);
   $name = htmlentities($_POST['name']);
   $email = htmlentities($_POST['email']);
@@ -57,7 +57,7 @@ if (isset($_POST) && !empty($_POST)) {
   // Je n'ai pas rajouté le prénom car il est déjà évoqué en première ligne du fichier
 
   // Création d'une variable contenant un message qui indique au user si sa demande a été prise en compte ou non
-  $demande = "$firstname, Tu vas bientôt faire partie de la famille ;)" . "<br>";
+  $demande = $firstname . "," . "<br>" . " Tu vas bientôt faire partie de la famille ;)";
 } else {
   $demande = "Inscris toi ! ;)";
 }
