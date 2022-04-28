@@ -1,16 +1,13 @@
 <?php
-include "../convert_utils.php";
+include "lib/convert_utils.php";
 
 if (isset($_GET['unit']) && isset($_GET['temp']) && !is_null($_GET['temp']) && !empty($_GET['unit'])) {
 
   $unit = htmlentities($_GET['unit']);
   $temp = htmlentities($_GET['temp']);
 
-
-  $convResult = convertCelsius($temp);
+  $resultat = convertCelsius($unit, $temp);
 }
-
-
 
 ?>
 
@@ -22,19 +19,18 @@ if (isset($_GET['unit']) && isset($_GET['temp']) && !is_null($_GET['temp']) && !
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="../www/main.css">
-  <link rel="stylesheet" href="../www/header.css">
-  <link rel="stylesheet" href="../www/footer.css">
-  <title>Convertisseur</title>
+  <link rel="stylesheet" href="www/main.css">
+
+  <title>Convertisseur 2</title>
 </head>
 
 <body>
-  <?php require "../templates/header.phtml" ?>
+  <?php require "templates/header.phtml" ?>
 
   <form class="shine" action="" method="get">
     <div class="result" placeholder="Résultat">
-      <?php if (isset($convResult)) : ?>
-        <?= $convResult; ?>
+      <?php if (isset($resultat)) : ?>
+        <?= $resultat; ?>
       <?php endif; ?>
     </div>
     <label for="temp">Saisir une température</label>
@@ -49,7 +45,7 @@ if (isset($_GET['unit']) && isset($_GET['temp']) && !is_null($_GET['temp']) && !
     <button class=" btn shine" type="submit">Convertir</button>
   </form>
 
-  <?php require "../templates/footer.phtml" ?>
+  <?php require "templates/footer.phtml" ?>
   <script src="script/main.js"></script>
 </body>
 
