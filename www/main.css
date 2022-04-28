@@ -358,4 +358,7 @@ select {
     margin: 30px 0;
     font-size: 18px;
   }
+  body {
+    padding-bottom: 50px;
+  }
 }
