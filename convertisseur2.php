@@ -1,7 +1,7 @@
 <?php
-include "lib/convert_utils.php";
 
 if (isset($_GET['unit']) && isset($_GET['temp']) && !is_null($_GET['temp']) && !empty($_GET['unit'])) {
+  include "lib/convert_utils.php";
 
   $unit = htmlentities($_GET['unit']);
   $temp = htmlentities($_GET['temp']);
@@ -36,7 +36,7 @@ if (isset($_GET['unit']) && isset($_GET['temp']) && !is_null($_GET['temp']) && !
     <label for="temp">Saisir une température</label>
     <input type="number" name="temp" value="">
 
-    <select name="unit" id="">
+    <select name="unit" id="unit">
       <option value="defaut">-- Choisir une unité --</option>
       <option value="Fah">Fahrenheit</option>
       <option value="Kel">Kelvin</option>
