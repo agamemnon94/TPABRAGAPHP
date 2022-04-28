@@ -20,15 +20,14 @@ if (isset($_GET['unit']) && isset($_GET['temp']) && !is_null($_GET['temp']) && !
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="www/main.css">
-
   <title>Convertisseur 2</title>
 </head>
 
 <body>
   <?php require "templates/header.phtml" ?>
 
-  <form class="shine" action="" method="get">
-    <div class="result" placeholder="Résultat">
+  <form class="shine" action="convertisseur2.php" method="get">
+    <div class="result">
       <?php if (isset($resultat)) : ?>
         <?= $resultat; ?>
       <?php endif; ?>
@@ -38,8 +37,8 @@ if (isset($_GET['unit']) && isset($_GET['temp']) && !is_null($_GET['temp']) && !
 
     <select name="unit" id="unit">
       <option value="defaut">-- Choisir une unité --</option>
-      <option value="Fah">Fahrenheit</option>
-      <option value="Kel">Kelvin</option>
+      <option value="fah">Fahrenheit</option>
+      <option value="kel">Kelvin</option>
     </select>
 
     <button class=" btn shine" type="submit">Convertir</button>
