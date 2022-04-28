@@ -1,15 +1,5 @@
 <?php
 
-// echo "<pre>";
-// echo print_r($_POST);
-// echo "</pre>";
-// $firstname = $_POST['firstname'] . "<br>";
-// $name = $_POST['name'];
-// $email = $_POST['email'];
-// $majeur = $_POST['majeur'];
-
-// echo $majeur;
-
 //Création d'un nouveau fichier pour chaque requête user
 
 //Ajouter le timestamp au nom de fichier

@@ -26,7 +26,4 @@ if (isset($_GET['valider'])) {
 
 
 
-
-
-
 require "templates/connexion.phtml";
