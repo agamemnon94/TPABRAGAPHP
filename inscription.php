@@ -1,10 +1,8 @@
 <?php
-
 //Création d'un nouveau fichier pour chaque requête user
 
 //Ajouter le timestamp au nom de fichier
 // $tsp = strtotime('now');
-
 // ↓ plutôt ça
 // echo $tsp;
 
@@ -35,12 +33,7 @@ if (isset($_POST) && !empty($_POST)) {
   fwrite($demandeInscription, "Demande d'inscription de " . $firstname . " au " . $maDate . "\n");
 
   fwrite($demandeInscription, "Nom : " . $name . "\n");
-
   fwrite($demandeInscription, "email : " . $email . "\n");
-
-  // J'utilise la variable créee pour renseigner l'état de majorité du user
-  //Les variables ne sont pas utiles dans le cas présent
-  // En fait si, les variables sont indispensables
   fwrite($demandeInscription, "Majeur : " . $majeur . "\n");
   fclose($demandeInscription);
 
@@ -51,14 +44,6 @@ if (isset($_POST) && !empty($_POST)) {
 } else {
   $demande = "Inscris toi ! ;)";
 }
-
-
-
-
-
-
-
-
 
 
 
