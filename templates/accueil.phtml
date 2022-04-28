@@ -23,16 +23,18 @@
 
     <div class="channel">
       <p class="p_channel">Contenu du tableau $channel</p>
-      <p><?= print_r($channel) ?></p>
+      <p class=""><?= print_r($channel) ?></p>
     </div>
 
     <?php foreach ($channel as $key => $value) : ?>
       <p class="p_channel"><?= $key ?></p>
       <?php if ($key == 'horlogerie') : ?>
 
-        <?php foreach ($value as $x) : ?>
-          <p class="p_channel2"><?= $x ?></p>
-        <?php endforeach; ?>
+        <div class="channel">
+          <?php foreach ($value as $x) : ?>
+            <p class="p_channel2"><?= $x ?></p>
+          <?php endforeach; ?>
+        </div>
 
       <?php endif; ?>
 
