@@ -28,10 +28,10 @@
   justify-content: center;
 }
 .a_nav {
-  /* display: flex;
+  display: flex;
+  flex-direction: column;
   justify-content: center;
-  align-items: center; */
-  text-align: center;
+  align-items: center;
   color: #f1f1f1;
   text-decoration: none;
   text-transform: uppercase;
@@ -43,7 +43,7 @@
 .a_nav::after {
   content: "";
   display: block;
-  border-bottom: 3px solid #fff;
+  border-bottom: 2.5px solid #fff;
   border-radius: 10px;
   width: 0px;
   margin: 2px auto 0 auto;
