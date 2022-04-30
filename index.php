@@ -22,3 +22,7 @@ $channel = [
 
 
 require "templates/accueil.phtml";
+
+// depuis la console (ctrl + ù)
+// php -S localhost:8000
+// Pour lancer le projet dans localhost
