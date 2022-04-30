@@ -25,4 +25,6 @@ require "templates/accueil.phtml";
 
 // depuis la console (ctrl + ù)
 // php -S localhost:8000
-// Pour lancer le projet dans localhost
+// ctrl + clic sur le lien ↓
+// Sat Apr 30 09:20:11 2022] PHP 8.1.0 Development Server (http://localhost:8000) started
+// Pour lancer le projet dans localhost dans le navigateur
