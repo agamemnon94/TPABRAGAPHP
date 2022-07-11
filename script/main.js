@@ -8,7 +8,6 @@ window.addEventListener('load', () => {
 })
 
 window.addEventListener('scroll', () => {
-  console.log(scrollY);
   let scrollTop = window.pageYOffset || this.document.scrollTop;
   if (scrollTop > lastScrollTop) {
     header.classList.add('hidden_header');

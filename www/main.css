@@ -107,7 +107,7 @@ body::-webkit-scrollbar-corner {
 }
 .opacityOn {
   opacity: 1;
-  transition: 2s ease-in-out;
+  transition: 1s ease-in-out;
 }
 .bigApple {
   color: greenyellow;
