@@ -200,13 +200,12 @@ label {
 .btn {
   font-size: 24px;
   margin: 30px 0 20px 0;
-  width: 110px;
   background: #444;
   color: lightskyblue;
   outline: none;
   border: none;
   border-radius: 8px;
-  padding: 1rem 0.5rem;
+  padding: 1rem 2rem;
   box-shadow: 0 0 15px 0 #000;
   cursor: pointer;
   transition: 0.2s ease-in-out;
