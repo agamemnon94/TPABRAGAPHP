@@ -17,7 +17,7 @@ if (isset($_GET['valider'])) {
       header('location: http://localhost/TPABRAGAPHP/index.php');
       // echo "Bonjour " . $_GET['nom'];
     } else {
-      echo "Les valeurs entrées sont incorrectes";
+      echo "<div class='alerte'>Les valeurs saisies sont incorrectes !</div>";
     }
   } else {
     header('location: http://localhost/TPABRAGAPHP/conn_success.php');
